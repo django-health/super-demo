@@ -87,7 +87,9 @@ npx expo run:ios            # or: npx expo run:android
 
 Sign in with `demo` / `demo`. On a physical phone, point the app at your
 machine: `EXPO_PUBLIC_API_URL=http://<your-lan-ip>:8000 npx expo start`.
-The Android emulator uses `http://10.0.2.2:8000` automatically.
+The Android emulator uses `http://10.0.2.2:8000` automatically. If port
+8000 is taken, run the backend on another port and set
+`EXPO_PUBLIC_API_URL` to match (it works on web builds too).
 
 The suggested demo loop:
 
