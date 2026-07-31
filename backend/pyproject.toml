@@ -1,0 +1,28 @@
+[project]
+name = "super-demo-backend"
+version = "0.1.0"
+description = "Django backend for the django-health super-demo: every wearable integration plus a device API for the React Native app"
+requires-python = ">=3.10"
+dependencies = [
+    "django>=5.0",
+    "django-cors-headers>=4.4",
+    "django-healthdatamodel>=0.9",
+    "django-google-health>=0.6",
+    "django-garmin>=0.1",
+    "django-oura>=0.2",
+    # PyPI django-strava is still the pre-healthdatamodel 0.1.x; the 0.2.0
+    # rewrite lives on this branch (PR django-health/django-strava#10).
+    "django-strava @ git+https://github.com/django-health/django-strava@rewrite/healthdatamodel-new-api",
+    "django-whoop>=0.2",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-django>=4.8",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings"
+python_files = ["test_*.py"]
+testpaths = ["tests"]

@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+db.sqlite3
+
+# Node / Expo
+node_modules/
+.expo/
+dist/
+web-build/
+*.tsbuildinfo
+
+# Native build output (repo ships JS + config plugins; run `npx expo prebuild`)
+app/ios/
+app/android/
+
+# Env
+.env
