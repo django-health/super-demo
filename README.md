@@ -53,9 +53,14 @@ uv run python manage.py runserver 0.0.0.0:8000
 ```
 
 Provider credentials come from the same environment variables as each
-package's own demo (`GOOGLE_HEALTH_CLIENT_ID`, `GARMIN_CLIENT_ID`,
-`OURA_CLIENT_ID`, `STRAVA_CLIENT_ID`, `WHOOP_CLIENT_ID`, plus matching
-`_CLIENT_SECRET` / `_REDIRECT_URI`) — see `backend/config/settings.py`.
+package's own demo. `backend/.env.example` documents every variable plus
+where to register each app and the redirect-URI gotchas; copy it to `.env`
+and run with:
+
+```bash
+uv run --env-file .env python manage.py runserver 0.0.0.0:8000
+```
+
 Providers without credentials show up as “no credentials” in the app.
 Unconfigured is fine: the device pipelines and seeded data work with zero
 provider setup.
