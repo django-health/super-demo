@@ -433,7 +433,7 @@ wheels = [
 [[package]]
 name = "django-strava"
 version = "0.2.0"
-source = { git = "https://github.com/django-health/django-strava?rev=rewrite%2Fhealthdatamodel-new-api#c53ab6297786fc2d176410cb2b6ae7892d1faca4" }
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "django", version = "5.2.16", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.12'" },
     { name = "django", version = "6.0.7", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.12'" },
@@ -441,6 +441,10 @@ dependencies = [
     { name = "httpx" },
     { name = "pydantic" },
     { name = "python-dateutil" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/ee/b7/d3eec2beb3fa47f21232e4bd01c08ae029a692460a975a9a593d6a5709fd/django_strava-0.2.0.tar.gz", hash = "sha256:92dfe1fe3a1dd00a46d22a59d1b9e763ac1d285fad8c51b47e28ac9c3d5b64cf", size = 20518, upload-time = "2026-08-03T18:22:38.763Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/34/0d/df4f231d3a5d1a46e49173b8c13f718436b70da815e1a672ef51a41310bb/django_strava-0.2.0-py3-none-any.whl", hash = "sha256:fab80f10076beaaa521326e19da6e5a0b9c50d60a43c0b140386e309c9c3b61d", size = 28400, upload-time = "2026-08-03T18:22:37.47Z" },
 ]
 
 [[package]]
@@ -868,7 +872,7 @@ requires-dist = [
     { name = "django-google-health", specifier = ">=0.6" },
     { name = "django-healthdatamodel", specifier = ">=0.9" },
     { name = "django-oura", specifier = ">=0.2" },
-    { name = "django-strava", git = "https://github.com/django-health/django-strava?rev=rewrite%2Fhealthdatamodel-new-api" },
+    { name = "django-strava", specifier = ">=0.2" },
     { name = "django-whoop", specifier = ">=0.2" },
 ]
 

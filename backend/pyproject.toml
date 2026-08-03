@@ -10,9 +10,7 @@ dependencies = [
     "django-google-health>=0.6",
     "django-garmin>=0.1",
     "django-oura>=0.2",
-    # PyPI django-strava is still the pre-healthdatamodel 0.1.x; the 0.2.0
-    # rewrite lives on this branch (PR django-health/django-strava#10).
-    "django-strava @ git+https://github.com/django-health/django-strava@rewrite/healthdatamodel-new-api",
+    "django-strava>=0.2",
     "django-whoop>=0.2",
 ]
 
